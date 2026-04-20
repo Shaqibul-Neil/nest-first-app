@@ -1,10 +1,10 @@
 import { IsInt, IsString } from 'class-validator';
 
-export class UpdateStudentDto {
+export class createCustomerDto {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-call
   @IsString()
-  name?: string;
+  name!: string;
   // eslint-disable-next-line @typescript-eslint/no-unsafe-call
   @IsInt()
-  age?: number;
+  age!: number;
 }

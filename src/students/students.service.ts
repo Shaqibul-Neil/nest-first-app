@@ -13,18 +13,17 @@ export class StudentsService {
   ];
 
   //GET Method
-  getAllStudents() {
+  getAllStudents(): TStudent[] {
     return this.students;
   }
-  getStudentByID(id: string) {
-    if (!id) return null;
+  getStudentByID(id: string): TStudent {
     const student = this.students.find((s) => s.id === id);
     if (!student) throw new NotFoundException('Student not found');
     return student;
   }
 
   //Post Method
-  createStudent(data: CreateStudentDto) {
+  createStudent(data: CreateStudentDto): TStudent {
     const newStudent: TStudent = { id: Date.now().toString(), ...data };
     this.students.push(newStudent);
     return newStudent;
