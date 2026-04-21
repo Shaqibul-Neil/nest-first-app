@@ -12,6 +12,7 @@ import { StudentsModule } from './students/students.module';
 import { CustomerModule } from './customer/customer.module';
 import { CustomerController } from './customer/customer.controller';
 import { CustomerService } from './customer/customer.service';
+import { MynameController } from './myname/myname.controller';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import { CustomerService } from './customer/customer.service';
     UserController,
     ProductsController,
     CustomerController,
+    MynameController,
   ],
   providers: [AppService, UserService, ProductsService, CustomerService],
 })
